@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="ISO-8859-1">
     <title>Employee Management System</title>
 </head>
 <body>
 
     <div align="center">
         <h1> Employee List</h1>
-        <table>
+        <table border="1">
             <thead>
                 <tr>
                     <th> Employee First Name</th>
@@ -17,10 +17,10 @@
                 </tr>
             </thead>
             <tbody>
-                <tr th:each="emPloyee : ${listEmployee}}">
-                    <td th:text = "${emPloyee.firstName}}"></td>
-                    <td th:text = "${emPloyee.lastName}}"></td>
-                    <td th:text = "${emPloyee.email}}"></td>
+                <tr th:each="employee : ${listEmployee}">
+                    <td th:text = "${employee.firstName}"></td>
+                    <td th:text = "${employee.lastName}"></td>
+                    <td th:text = "${employee.email}"></td>
                 </tr>
 
             </tbody>
